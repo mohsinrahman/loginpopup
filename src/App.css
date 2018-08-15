@@ -4,6 +4,7 @@
 body {
   font-family: "Roboto","Helvetica Neue","sans-serif";
 background-color: #7c4dff;
+color: rgb(66, 66, 66);
 }
 
 .App-logo {
@@ -33,7 +34,7 @@ background-color: #7c4dff;
 
 
 .button, .submit{
-    background-color: #E1E2E1; /* Green */
+    background-color: #E1E2E1;
     border: none;
     color: rgb(124, 77, 255);;
     padding: 15px 32px;
@@ -44,9 +45,19 @@ background-color: #7c4dff;
     margin: 4px 2px;
     cursor: pointer;
 }
+.button-modal-1{
+
+    margin-top: 5%;
+}
+
+.submit{
+  margin: 20px auto;
+}
 .wrapper {
-    text-align: center;
-transform: translate(-50%, -50%);
+  margin-top: 50px;
+  margin-left: 20px;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 .initialButton{
   position: absolute;
@@ -55,21 +66,107 @@ transform: translate(-50%, -50%);
 
 }
 
+#signout{
+display: inline-block;
+float: right;
+padding: 10px;
+color: #E1E2E1;
+}
+
+.sidenav{
+  background: #E1E2E1;
+  height: 100vh;
+}
+.foto{
+  margin: 20px auto;
+  height: 150px;
+  width: 150px;
+}
+.foto-me{
+  height: 150px;
+  width: 150px;
+  border: 5px solid #7c4dff;
+  border-radius: 50%;
+}
+.email{
+  color: #E1E2E1;
+}
+.label {
+    border-radius: 0;
+}
+.label-danger {
+    background-color: rgb(236, 64, 122);
+}
+.label-primary {
+    background-color: rgb(255, 112, 67);
+}
+
+.edit-heading small {
+    color: #E1E2E1;
+}
+
+.login h1, .welcome-modal{
+  color:  #E1E2E1;
+
+}
+.login{
+
+  text-align: center;
+
+}
+
+.login form{
+
+  margin-top: 5%;
+
+}
+.login-avtar{
+
+  color: #E1E2E1;
+  margin-top: 5%;
+}
+
+.profile{
+margin-top: 25px;
+}
+
+.description{
+  color: rgb(245, 245, 245);
+  line-height: 1.75;
+  letter-spacing:0.2px;
+}
+
+.nav{
+  margin-top: 50px;
+}
+.nav li{
+  margin: 2px;
+}
+.nav-pills>li>a {
+    border-radius: 0px;
+}
+.nav-pills>li.active>a {
+    color: #E1E2E1;
+    background-color: rgb(92, 107, 192);
+}
+.nav-pills>li.active>a:hover {
+    background-color: #7c4dff;
+}
 input[type="email"] {
-  width: 480px;
+  width: 350px;
   margin-top: 20px;
-  padding: 10px;
-  font-size: 30px;
+  padding: 5px;
+  font-size: 25px;
   border: none;
   border-bottom: solid 2px #c9c9c9;
   transition: border 0.3s;
 }
 
 input[type="password"] {
-  width: 480px;
+  width: 350px;
   margin-top: 20px;
-  padding: 10px;
-  font-size: 30px;
+  padding: 5px;
+  font-size: 25px;
 
   border: none;
   border-bottom: solid 2px #c9c9c9;
@@ -78,4 +175,25 @@ input[type="password"] {
 input[type="email"]:focus,
 input[type="password"].focus {
   border-bottom: solid 2px #969696;
+}
+
+.loader:empty {
+  position: absolute;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-left: 1.1em solid #E1E2E1;
+  border-radius: 50%;
+  animation: loader 1.1s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

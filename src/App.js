@@ -13,8 +13,9 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    backgroundColor       : '#fff',
+    backgroundColor       : '#7c4dff',
     transform             : 'translate(-50%, -50%)'
+
   }
 };
 
@@ -31,12 +32,23 @@ class App extends Component {
     this.state = {
       isActive: false,
       isSecondActive : false,
+     loading: true,
       user: null
     }
   }
-  componentWillMount(){
-    Modal.setAppElement('body');
-  }
+
+
+componentDidMount() {
+  setTimeout(
+    function() {
+        this.setState({loading: false});
+    }
+    .bind(this),
+    5000
+);
+Modal.setAppElement('body');
+}
+
   toggleModal = () => {
      this.setState({
        isActive : !this.state.isActive
@@ -59,10 +71,17 @@ class App extends Component {
 signOut() {
   this.setState({user: null})
 }
-  render() {
-    return (
-      <section>
-      <div className="wrapper">
+
+
+render() {
+  const { loading } = this.state;
+console.log(loading);
+  if(loading) { // if your component doesn't have to wait for async data, remove this block
+    return null; // render null when app is not ready
+  }
+ else{
+   return (
+     <section><div className="wrapper">
       <p>
       <button className=" animated fadeInUp button initialButton" onClick={this.toggleModal}>Get Ready & Start the App </button>
       </p>
@@ -139,8 +158,8 @@ signOut() {
             }}
     ></Particles>
       <Modal  isOpen={this.state.isActive} style={customStyles}>
-      <h1 className=" animated lightSpeedIn"> Welcome to the our App !</h1>
-      <button onClick={this.secondtoggleModal} className="button animated zoomIn">Click here Login</button>
+      <h1 className=" animated lightSpeedIn welcome-modal"> Welcome to the world of Stars!</h1>
+      <button onClick={this.secondtoggleModal} className="button button-modal-1 animated zoomIn">Click here to Login</button>
        </Modal>
        <Modal  isOpen={this.state.isSecondActive} style={customStylesBig}>
        {
@@ -155,9 +174,13 @@ signOut() {
             />
         }
         </Modal>
-      </section>
-    );
-  }
+</section>
+   );
+ }
+
+}
+
+
 }
 
 export default App;

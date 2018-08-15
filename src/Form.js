@@ -14,8 +14,9 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <section className=" animated pulse">
-      <h1 > Login to Edit your profile!</h1>
+      <section className=" animated pulse login">
+      <h1> Login to Edit your profile!</h1>
+      <div className="login-avtar"><i class="fas fa-user-circle fa-10x"></i></div>
       <form onSubmit={this.handleSignIn.bind(this)} >
         <input type="text" id="email" ref="username" type="email" placeholder="Email" /> <br />
          <input type="password" id="password" ref="password" type="password" placeholder="********"/><br />
