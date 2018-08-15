@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './logo.svg';
 import Modal from 'react-modal';
 import Particles from "react-particles-js"
 import LoginForm from "./Form.js"
@@ -32,7 +31,7 @@ class App extends Component {
     this.state = {
       isActive: false,
       isSecondActive : false,
-     loading: true,
+      loading: true,
       user: null
     }
   }
@@ -75,9 +74,9 @@ signOut() {
 
 render() {
   const { loading } = this.state;
-console.log(loading);
-  if(loading) { // if your component doesn't have to wait for async data, remove this block
-    return null; // render null when app is not ready
+  console.log(loading);
+  if(loading) {
+    return null;
   }
  else{
    return (

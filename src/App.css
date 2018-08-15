@@ -46,8 +46,7 @@ color: rgb(66, 66, 66);
     cursor: pointer;
 }
 .button-modal-1{
-
-    margin-top: 5%;
+   margin-top: 5%;
 }
 
 .submit{
@@ -62,8 +61,7 @@ color: rgb(66, 66, 66);
 .initialButton{
   position: absolute;
   left: 50%;
- top: 50%;
-
+  top: 50%;
 }
 
 #signout{
@@ -107,21 +105,15 @@ color: #E1E2E1;
 
 .login h1, .welcome-modal{
   color:  #E1E2E1;
-
 }
 .login{
-
   text-align: center;
-
 }
 
 .login form{
-
   margin-top: 5%;
-
 }
 .login-avtar{
-
   color: #E1E2E1;
   margin-top: 5%;
 }
