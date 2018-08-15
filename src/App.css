@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+body {
+  font-family: "Roboto","Helvetica Neue","sans-serif";
+background-color: #7c4dff;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.button, .submit{
+    background-color: #E1E2E1; /* Green */
+    border: none;
+    color: rgb(124, 77, 255);;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.wrapper {
+    text-align: center;
+transform: translate(-50%, -50%);
+}
+.initialButton{
+  position: absolute;
+  left: 50%;
+ top: 50%;
+
+}
+
+input[type="email"] {
+  width: 480px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 30px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+
+input[type="password"] {
+  width: 480px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 30px;
+
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+input[type="email"]:focus,
+input[type="password"].focus {
+  border-bottom: solid 2px #969696;
+}
